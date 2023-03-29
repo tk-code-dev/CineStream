@@ -32,31 +32,28 @@ object MovieDatabaseAPI {
 
     interface MovieService {
         @GET("/$API_VERSION/movie/popular")
-        fun fetchPopularList(@Query("page") page: Int): Call<MoviesResponse>
+        suspend fun fetchPopularList(@Query("page") page: Int): Response<MoviesResponse>
 
         @GET("/$API_VERSION/movie/upcoming")
-        fun fetchUpcomingList(@Query("page") page: Int): Call<MoviesResponse>
+        suspend fun fetchUpcomingList(@Query("page") page: Int): Response<MoviesResponse>
 
         @GET("/$API_VERSION/movie/now_playing")
-        fun fetchInTheatersList(@Query("page") page: Int): Call<MoviesResponse>
+        suspend fun fetchInTheatersList(@Query("page") page: Int): Response<MoviesResponse>
 
-//        @GET("/$API_VERSION/discover/movie")
-//        fun fetchDiscoverList(@Query("api_key") apiKey: String): Response<MovieResponse>
-
-        @GET("/3/discover/movie?language=en&sort_by=popularity.desc")
-        fun fetchDiscoverList(): Response<List<MovieModel>>
+        @GET("/$API_VERSION/discover/movie?language=en&sort_by=popularity.desc")
+        suspend fun fetchDiscoverList(): Response<MovieResponse>
 
         @GET("/$API_VERSION/movie/{id}")
-        fun fetchDetails(@Path("id") id: Int): Response<Movie>
+        suspend fun fetchDetails(@Path("id") id: Int): Response<Movie>
     }
 
     interface TvService {
         @GET("/$API_VERSION/discover/tv")
-        fun fetchDiscoveryList(@Query("page") page: Int): Call<TvDiscoverResponse>
+        suspend fun fetchDiscoveryList(@Query("page") page: Int): Response<TvDiscoverResponse>
     }
 
-    interface PeopleService {
+    interface ActorService {
         @GET("/$API_VERSION/person/{id}")
-        fun fetchDetails(@Path("id") id: Int): Call<Person>
+        suspend fun fetchDetails(@Path("id") id: Int): Response<Person>
     }
 }

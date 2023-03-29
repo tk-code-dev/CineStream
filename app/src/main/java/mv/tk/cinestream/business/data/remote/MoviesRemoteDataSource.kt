@@ -11,7 +11,7 @@ class MoviesRemoteDataSource @Inject constructor(
     private val apiService: MovieDatabaseAPI.MovieService, retrofit: Retrofit
 ) : BaseRemoteDataSource(retrofit) {
 
-    suspend fun fetchMoviesFromRemote(): Output<List<MovieModel>> {
+    suspend fun fetchMoviesFromRemote(): Output<MovieResponse> {
         return getResponse(
             request = { apiService.fetchDiscoverList() },
             defaultErrorMessage = "Error fetching Movies"
