@@ -48,6 +48,7 @@ class MovieFragment : BaseFragment() {
             }
         }
     }
+
     private val onMovieClick: (movieItem: MovieModel) -> Unit =
         { movie ->
             navigateToDetail(movie)

@@ -4,10 +4,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import mv.tk.cinestream.business.domain.usecase.MoviesUseCase
-import mv.tk.cinestream.business.domain.usecase.MoviesUseCaseImpl
-import mv.tk.cinestream.business.domain.usecase.TvsUseCase
-import mv.tk.cinestream.business.domain.usecase.TvsUseCaseImpl
+import mv.tk.cinestream.business.domain.usecase.*
 import javax.inject.Singleton
 
 @Module
@@ -21,4 +18,7 @@ abstract class UseCaseModule {
     @Singleton
     internal abstract fun bindTvsUseCase(useCaseImpl: TvsUseCaseImpl): TvsUseCase
 
+    @Binds
+    @Singleton
+    internal abstract fun bindActorsUseCase(useCaseImpl: ActorsUseCaseImpl): ActorsUseCase
 }

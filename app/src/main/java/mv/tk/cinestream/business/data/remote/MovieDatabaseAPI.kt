@@ -1,9 +1,6 @@
 package mv.tk.cinestream.business.data.remote
 
-import mv.tk.cinestream.business.domain.model.Movie
-import mv.tk.cinestream.business.domain.model.MovieResponse
-import mv.tk.cinestream.business.domain.model.Person
-import mv.tk.cinestream.business.domain.model.TvResponse
+import mv.tk.cinestream.business.domain.model.*
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -66,6 +63,8 @@ object MovieDatabaseAPI {
     }
 
     interface ActorService {
+        @GET("/$API_VERSION/person/popular")
+        suspend fun fetchActors(): Response<ActorResponse>
         @GET("/$API_VERSION/person/{id}")
         suspend fun fetchDetails(@Path("id") id: Int): Response<Person>
     }

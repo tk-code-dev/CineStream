@@ -65,4 +65,10 @@ object NetworkModule {
     fun provideTvApiService(retrofit: Retrofit): MovieDatabaseAPI.TvService{
         return retrofit.create(MovieDatabaseAPI.TvService::class.java)
     }
+
+    @Singleton
+    @Provides
+    fun provideActorApiService(retrofit: Retrofit): MovieDatabaseAPI.ActorService{
+        return retrofit.create(MovieDatabaseAPI.ActorService::class.java)
+    }
 }
