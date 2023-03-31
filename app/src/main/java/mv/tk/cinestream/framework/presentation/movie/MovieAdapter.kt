@@ -22,8 +22,14 @@ class MovieAdapter(
 
         fun bind(item: MovieModel) {
             binding.movie = item
-            Glide.with(itemView).load(MovieDatabaseAPI.getPosterPath(item.poster_path)).into(binding.imgPoster)
-            Log.d(TAG,bindingAdapterPosition.toString())
+            if (item.poster_path!=null) {
+                Glide.with(itemView).load(MovieDatabaseAPI.getPosterPath(item.poster_path))
+                    .into(binding.imgPoster)
+            } else {
+            Glide.with(itemView).load(MovieDatabaseAPI.getBackdropUrl(item.backdrop_path))
+                .into(binding.imgPoster)
+        }
+        Log.d(TAG,bindingAdapterPosition.toString())
             binding.position = bindingAdapterPosition
             binding.root.setOnClickListener {
                 if(binding.movie!=null){

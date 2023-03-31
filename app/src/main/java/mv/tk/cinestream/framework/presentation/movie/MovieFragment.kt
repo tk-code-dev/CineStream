@@ -47,7 +47,6 @@ class MovieFragment : BaseFragment() {
                 Output.Status.LOADING -> {}
             }
         }
-
     }
     private val onMovieClick: (movieItem: MovieModel) -> Unit =
         { movie ->

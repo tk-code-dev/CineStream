@@ -5,7 +5,9 @@ import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import mv.tk.cinestream.business.data.repository.MoviesRepositoryImpl
+import mv.tk.cinestream.business.data.repository.TvsRepositoryImpl
 import mv.tk.cinestream.business.domain.repository.MoviesRepository
+import mv.tk.cinestream.business.domain.repository.TvsRepository
 import javax.inject.Singleton
 
 @Module
@@ -14,4 +16,8 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     internal abstract fun bindMoviesRepository(repository: MoviesRepositoryImpl): MoviesRepository
+
+    @Binds
+    @Singleton
+    internal abstract fun bindTvsRepository(repository: TvsRepositoryImpl): TvsRepository
 }

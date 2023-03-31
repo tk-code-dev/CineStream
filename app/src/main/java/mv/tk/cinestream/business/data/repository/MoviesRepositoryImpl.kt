@@ -20,5 +20,4 @@ internal class MoviesRepositoryImpl @Inject constructor(
             emit(result)
         }.flowOn(Dispatchers.IO)
     }
-
 }
