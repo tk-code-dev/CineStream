@@ -5,6 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import mv.tk.cinestream.business.data.repository.RoomDbRepository
+import mv.tk.cinestream.business.data.room.entity.ActorDbEntity
+import mv.tk.cinestream.business.data.room.entity.MovieDbEntity
+import mv.tk.cinestream.business.data.room.entity.TvDbEntity
 import mv.tk.cinestream.business.domain.model.MovieModel
 import mv.tk.cinestream.business.domain.model.Output
 import mv.tk.cinestream.databinding.FragmentMovieBinding
@@ -18,13 +22,24 @@ class MovieFragment : BaseFragment() {
 
     @Inject
     lateinit var movieAdapter: MovieAdapter
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View = FragmentMovieBinding.inflate(inflater, container, false).let {
+
+//    @Inject
+//    lateinit var repository: RoomDbRepository
+//
+//    @Inject
+//    lateinit var movie: MovieDbEntity
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View = FragmentMovieBinding.inflate(inflater, container, false).let {
         binding = it
         with(it) {
             root
         }
+
     }
+
     override fun subscribeUi() {
         binding?.let {
             movieAdapter = MovieAdapter(arrayListOf(), onMovieClick)
@@ -37,6 +52,19 @@ class MovieFragment : BaseFragment() {
 //                        Log.d(TAG,list.toString())
                         movieAdapter.update(list.results)
                     }
+//                    val movies = result.data?.results?.map { it ->
+//                        MovieDbEntity(
+//                            page = 1,
+//                            id = it.id,
+//                            title = it.title,
+//                            backdrop_path = it.backdrop_path,
+//                            overview = it.overview,
+//                            poster_path = it.poster_path,
+//                            release_date = it.release_date,
+//                            )
+//                    }
+//                    movies?.let{repository.insertMovieList(it)}
+
                 }
                 Output.Status.ERROR -> {
                     result.message?.let {
@@ -55,6 +83,47 @@ class MovieFragment : BaseFragment() {
         }
 
     private fun navigateToDetail(movie: MovieModel) {
-        
+
     }
+
+//    fun movieModelToDbEntity(movieModel: MovieModel): MovieDbEntity {
+//        return MovieDbEntity(
+//            id = movieModel.id,
+//            title = movieModel.title,
+//            adult = movieModel.adult,
+//            backdrop_path = movieModel.backdrop_path,
+////    val genre_ids: List<Int>,
+//            original_language = movieModel.original_language,
+//            original_title = movieModel.original_title,
+//            overview = movieModel.overview,
+////     popularity = movieModel.popularity,
+//            poster_path = movieModel.poster_path,
+//            release_date = movieModel.release_date,
+//
+//            video = movieModel.video,
+////   vote_average = movieModel.vote_average,
+//            vote_count = movieModel.vote_count
+//        )
+//    }
+
+//    fun mapToDbEntity(
+//        id: Int,
+//        page: Int,
+//        title: String,
+//        overview: String,
+//        posterPath: String?,
+//        releaseDate: String?,
+//        backdropPath:String?
+//    ): MovieDbEntity {
+//        return MovieDbEntity(
+//            id = id,
+//            page = page,
+//            title = title,
+//            overview = overview,
+//            poster_path = posterPath,
+//            release_date = releaseDate,
+//            backdrop_path = backdropPath
+//        )
+//    }
+
 }

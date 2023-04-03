@@ -2,8 +2,8 @@ package mv.tk.cinestream.business.domain.model
 
 import android.os.Parcelable
 import androidx.annotation.Keep
-import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
+import mv.tk.cinestream.business.data.room.entity.MovieDbEntity
 
 //data class MovieResponse(
 //    val page: Int,
@@ -46,7 +46,7 @@ data class MovieResponse(
     val results: List<MovieModel>,
     val total_pages: Int,
     val total_results: Int
-): Parcelable
+) : Parcelable
 
 @Keep
 @Parcelize
@@ -65,4 +65,4 @@ data class MovieModel(
     val video: Boolean,
     val vote_average: Double,
     val vote_count: Int
-): Parcelable
+) : Parcelable

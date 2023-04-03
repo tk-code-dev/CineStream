@@ -8,9 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import mv.tk.cinestream.business.data.remote.MovieDatabaseAPI
 import mv.tk.cinestream.business.domain.model.ActorModel
-import mv.tk.cinestream.business.domain.model.MovieModel
 import mv.tk.cinestream.databinding.ItemActorsBinding
-import mv.tk.cinestream.databinding.ItemMoviesBinding
 import javax.inject.Singleton
 
 @Singleton
