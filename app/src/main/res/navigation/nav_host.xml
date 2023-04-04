@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_movieFragment_to_tvFragment"
             app:destination="@id/tvFragment" />
+        <action
+            android:id="@+id/action_movieFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/actorFragment"
@@ -38,5 +41,9 @@
             android:id="@+id/action_tvFragment_to_movieFragment"
             app:destination="@id/movieFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="mv.tk.cinestream.framework.presentation.details.movie.MovieDetailFragment"
+        android:label="MovieDetailFragment" />
 
 </navigation>

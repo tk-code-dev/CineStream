@@ -32,6 +32,8 @@ class MovieAdapter(
         Log.d(TAG,bindingAdapterPosition.toString())
             binding.position = bindingAdapterPosition
             binding.root.setOnClickListener {
+                Log.d(TAG,item.id.toString())
+
                 if(binding.movie!=null){
                 onMovieClick.invoke(item)}
             }

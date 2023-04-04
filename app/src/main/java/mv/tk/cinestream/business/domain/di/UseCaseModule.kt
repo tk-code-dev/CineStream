@@ -16,6 +16,10 @@ abstract class UseCaseModule {
 
     @Binds
     @Singleton
+    internal abstract fun bindMovieDetailUseCase(useCaseImpl: MovieDetailUseCaseImpl): MovieDetailUseCase
+
+    @Binds
+    @Singleton
     internal abstract fun bindTvsUseCase(useCaseImpl: TvsUseCaseImpl): TvsUseCase
 
     @Binds

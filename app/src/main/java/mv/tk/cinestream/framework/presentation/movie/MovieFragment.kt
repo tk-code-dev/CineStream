@@ -5,14 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import mv.tk.cinestream.business.data.repository.RoomDbRepository
-import mv.tk.cinestream.business.data.room.entity.ActorDbEntity
-import mv.tk.cinestream.business.data.room.entity.MovieDbEntity
-import mv.tk.cinestream.business.data.room.entity.TvDbEntity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
+import mv.tk.cinestream.R
 import mv.tk.cinestream.business.domain.model.MovieModel
 import mv.tk.cinestream.business.domain.model.Output
 import mv.tk.cinestream.databinding.FragmentMovieBinding
 import mv.tk.cinestream.framework.presentation.base.BaseFragment
+import mv.tk.cinestream.framework.presentation.details.movie.MovieDetailFragment
 import javax.inject.Inject
 
 class MovieFragment : BaseFragment() {
@@ -22,6 +22,8 @@ class MovieFragment : BaseFragment() {
 
     @Inject
     lateinit var movieAdapter: MovieAdapter
+
+    private lateinit var navController: NavController
 
 //    @Inject
 //    lateinit var repository: RoomDbRepository
@@ -34,10 +36,10 @@ class MovieFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View = FragmentMovieBinding.inflate(inflater, container, false).let {
         binding = it
+        navController = findNavController()
         with(it) {
             root
         }
-
     }
 
     override fun subscribeUi() {
@@ -45,6 +47,7 @@ class MovieFragment : BaseFragment() {
             movieAdapter = MovieAdapter(arrayListOf(), onMovieClick)
             it.movieRv.adapter = movieAdapter
         }
+
         movieViewModel.moviesList.observe(viewLifecycleOwner) { result ->
             when (result.status) {
                 Output.Status.SUCCESS -> {
@@ -83,7 +86,11 @@ class MovieFragment : BaseFragment() {
         }
 
     private fun navigateToDetail(movie: MovieModel) {
-
+        navController.navigate(
+            R.id.action_movieFragment_to_movieDetailFragment,
+            MovieDetailFragment.Args(movie).toBundle(),
+            null
+        )
     }
 
 //    fun movieModelToDbEntity(movieModel: MovieModel): MovieDbEntity {
