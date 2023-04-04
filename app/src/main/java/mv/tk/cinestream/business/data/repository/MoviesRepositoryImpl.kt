@@ -5,6 +5,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import mv.tk.cinestream.business.data.remote.MoviesRemoteDataSource
+import mv.tk.cinestream.business.domain.model.MovieDetailModel
 import mv.tk.cinestream.business.domain.model.MovieResponse
 import mv.tk.cinestream.business.domain.model.Output
 import mv.tk.cinestream.business.domain.repository.MoviesRepository
@@ -17,6 +18,14 @@ internal class MoviesRepositoryImpl @Inject constructor(
         return flow {
             emit(Output.loading())
             val result = moviesRemoteDataSource.fetchMoviesFromRemote()
+            emit(result)
+        }.flowOn(Dispatchers.IO)
+    }
+
+    override suspend fun fetchMovieDetail(id:Int): Flow<Output<MovieDetailModel>> {
+        return flow {
+            emit(Output.loading())
+            val result = moviesRemoteDataSource.fetchMovieDetailFromRemote(id)
             emit(result)
         }.flowOn(Dispatchers.IO)
     }

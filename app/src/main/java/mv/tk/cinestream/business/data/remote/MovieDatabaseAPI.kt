@@ -53,7 +53,7 @@ object MovieDatabaseAPI {
         suspend fun fetchDiscoverList(): Response<MovieResponse>
 
         @GET("/$API_VERSION/movie/{id}")
-        suspend fun fetchDetails(@Path("id") id: Int): Response<Movie>
+        suspend fun fetchDetails(@Path("id") id: Int): Response<MovieDetailModel>
     }
 
     interface TvService {
