@@ -44,6 +44,16 @@
     <fragment
         android:id="@+id/movieDetailFragment"
         android:name="mv.tk.cinestream.framework.presentation.details.movie.MovieDetailFragment"
-        android:label="MovieDetailFragment" />
+        android:label="MovieDetailFragment"
+        tools:layout="@layout/fragment_movie_detail">
+        <action
+            android:id="@+id/action_movieDetailFragment_to_movieHomepageFragment"
+            app:destination="@id/movieHomepageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieHomepageFragment"
+        android:name="mv.tk.cinestream.framework.presentation.details.movie.homepage.MovieHomepageFragment"
+        android:label="fragment_movie_homepage"
+        tools:layout="@layout/fragment_movie_homepage" />
 
 </navigation>

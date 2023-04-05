@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import mv.tk.cinestream.R
 import mv.tk.cinestream.business.data.remote.MovieDatabaseAPI
 import mv.tk.cinestream.business.domain.model.MovieModel
 import mv.tk.cinestream.business.domain.model.Output
@@ -35,9 +37,16 @@ class MovieDetailFragment : BaseFragment() {
         }
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "SetJavaScriptEnabled")
     override fun subscribeUi() {
-        Log.d(TAG, movie.movie.id.toString())
+        binding?.itemHomepageDetail?.setOnClickListener {
+            val homepageUrl = binding?.itemHomepageDetail?.text.toString()
+            val bundle = Bundle()
+            bundle.putString("URL_HOMEPAGE", homepageUrl)
+            val navController = findNavController()
+            navController.navigate(R.id.movieHomepageFragment, bundle)
+        }
+
         movieDetailViewModel.fetchMovieDetail(movie.movie.id)
         movieDetailViewModel.movieDetail.observe(viewLifecycleOwner) { result ->
             when (result.status) {
@@ -81,7 +90,6 @@ class MovieDetailFragment : BaseFragment() {
                 return Args(movie)
             }
         }
-
         fun toBundle() = bundleOf(ARG_ITEM to movie)
     }
 }

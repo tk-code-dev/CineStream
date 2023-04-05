@@ -13,124 +13,139 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/black"
+        android:layout_marginBottom="80dp"
         tools:context=".framework.presentation.details.movie.MovieDetailFragment">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_height="match_parent"
             tools:ignore="UselessParent">
-
-            <ImageView
-                android:id="@+id/img_poster_detail"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:contentDescription="@string/poster"
-                android:scaleType="fitCenter"
-                tools:src="@drawable/ic_baseline_movie_24" />
-
-            <TextView
-                android:id="@+id/item_title_detail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@color/black"
-                android:gravity="start"
-                android:padding="3dp"
-                android:layout_marginTop="@dimen/dimen_8dp"
-                android:paddingStart="@dimen/dimen_16dp"
-                android:text="@{movie.belongsToCollection.name}"
-                android:textColor="@color/white"
-                android:textSize="26sp"
-                android:textStyle="bold"
-                tools:ignore="RtlSymmetry"
-                tools:text="title" />
-
-            <TextView
-                android:id="@+id/item_release_detail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/black"
-                android:gravity="start"
-                android:lines="1"
-                android:padding="3dp"
-                android:paddingStart="@dimen/dimen_16dp"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                tools:text="Date" />
-
-            <TextView
-                android:id="@+id/item_length_detail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@color/black"
-                android:gravity="start"
-                android:padding="3dp"
-                android:paddingStart="@dimen/dimen_16dp"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                tools:text="Length" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/black"
-                android:layout_gravity="start"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
 
-                <RatingBar
-                    android:id="@+id/item_rating_bar_detail"
-                    style="@style/MyRatingBarStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:background="@color/black"
-                    android:scaleX="0.2"
-                    android:scaleY="0.2"
-                    tools:rating="4.5f" />
+                <ImageView
+                    android:id="@+id/img_poster_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:contentDescription="@string/poster"
+                    android:scaleType="fitCenter"
+                    tools:src="@drawable/ic_baseline_movie_24" />
 
                 <TextView
-                    android:id="@+id/item_count_detail"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/item_title_detail"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_8dp"
                     android:background="@color/black"
+                    android:gravity="start"
+                    android:padding="3dp"
+                    android:paddingStart="@dimen/dimen_16dp"
+                    android:text="@{movie.belongsToCollection.name}"
+                    android:textColor="@color/white"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry"
+                    tools:text="title" />
+
+                <TextView
+                    android:id="@+id/item_release_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:gravity="start"
+                    android:lines="1"
+                    android:padding="3dp"
+                    android:paddingStart="@dimen/dimen_16dp"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    tools:text="count" />
+                    tools:text="Date" />
+
+                <TextView
+                    android:id="@+id/item_length_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/black"
+                    android:gravity="start"
+                    android:padding="3dp"
+                    android:paddingStart="@dimen/dimen_16dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Length"
+                    tools:ignore="RtlSymmetry" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@color/black"
+                    android:orientation="horizontal">
+
+                    <RatingBar
+                        android:id="@+id/item_rating_bar_detail"
+                        style="@style/MyRatingBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:background="@color/black"
+                        android:scaleX="0.2"
+                        android:scaleY="0.2"
+                        tools:rating="4.5f" />
+
+                    <TextView
+                        android:id="@+id/item_count_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/black"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="count" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/item_overview_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/black"
+                    android:gravity="start"
+                    android:padding="16dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Overview" />
+
+                <TextView
+                    android:id="@+id/item_homepage_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/black"
+                    android:gravity="start"
+                    android:layout_marginBottom="@dimen/dimen_16dp"
+                    android:paddingStart="@dimen/dimen_16dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    tools:text="Homepage" />
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="WebViewLayout" />
+
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/item_overview_detail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@color/black"
-                android:gravity="start"
-                android:padding="16dp"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                tools:text="Overview" />
-
-            <TextView
-                android:id="@+id/item_homepage_detail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@color/black"
-                android:gravity="start"
-                android:paddingStart="@dimen/dimen_16dp"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                tools:ignore="RtlSymmetry"
-                tools:text="Homepage" />
-        </LinearLayout>
-
+        </ScrollView>
     </FrameLayout>
 </layout>

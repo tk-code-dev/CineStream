@@ -85,11 +85,11 @@ dependencies {
     // Feature module Support
     implementation("androidx.navigation:navigation-dynamic-features-fragment:2.5.3")
     // Room
-    implementation 'androidx.room:room-runtime:2.5.0'
-    implementation 'androidx.room:room-ktx:2.5.0'
-    implementation 'androidx.room:room-paging:2.5.0'
+    implementation 'androidx.room:room-runtime:2.5.1'
+    implementation 'androidx.room:room-ktx:2.5.1'
+    implementation 'androidx.room:room-paging:2.5.1'
     implementation 'androidx.paging:paging-common-ktx:3.1.1'
-    kapt 'androidx.room:room-compiler:2.5.0'
+    kapt 'androidx.room:room-compiler:2.5.1'
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.15.1'
     kapt 'com.github.bumptech.glide:compiler:4.15.1'
