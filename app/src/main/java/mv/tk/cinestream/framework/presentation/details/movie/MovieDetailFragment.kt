@@ -90,6 +90,12 @@ class MovieDetailFragment : BaseFragment() {
                 return Args(movie)
             }
         }
+
         fun toBundle() = bundleOf(ARG_ITEM to movie)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
     }
 }
