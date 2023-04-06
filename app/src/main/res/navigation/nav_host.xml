@@ -33,6 +33,9 @@
         <action
             android:id="@+id/action_actorFragment_to_tvFragment"
             app:destination="@id/tvFragment" />
+        <action
+            android:id="@+id/action_actorFragment_to_actorDetailFragment"
+            app:destination="@id/actorDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/tvFragment"
@@ -57,5 +60,14 @@
         android:name="mv.tk.cinestream.framework.presentation.details.movie.homepage.MovieHomepageFragment"
         android:label="fragment_movie_homepage"
         tools:layout="@layout/fragment_movie_homepage" />
+    <fragment
+        android:id="@+id/actorDetailFragment"
+        android:name="mv.tk.cinestream.framework.presentation.details.actor.ActorDetailFragment"
+        android:label="fragment_actor_detail"
+        tools:layout="@layout/fragment_actor_detail" >
+        <argument
+            android:name="myInt"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

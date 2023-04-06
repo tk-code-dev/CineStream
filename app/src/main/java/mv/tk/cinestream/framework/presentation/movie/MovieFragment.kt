@@ -92,45 +92,4 @@ class MovieFragment : BaseFragment() {
             null
         )
     }
-
-//    fun movieModelToDbEntity(movieModel: MovieModel): MovieDbEntity {
-//        return MovieDbEntity(
-//            id = movieModel.id,
-//            title = movieModel.title,
-//            adult = movieModel.adult,
-//            backdrop_path = movieModel.backdrop_path,
-////    val genre_ids: List<Int>,
-//            original_language = movieModel.original_language,
-//            original_title = movieModel.original_title,
-//            overview = movieModel.overview,
-////     popularity = movieModel.popularity,
-//            poster_path = movieModel.poster_path,
-//            release_date = movieModel.release_date,
-//
-//            video = movieModel.video,
-////   vote_average = movieModel.vote_average,
-//            vote_count = movieModel.vote_count
-//        )
-//    }
-
-//    fun mapToDbEntity(
-//        id: Int,
-//        page: Int,
-//        title: String,
-//        overview: String,
-//        posterPath: String?,
-//        releaseDate: String?,
-//        backdropPath:String?
-//    ): MovieDbEntity {
-//        return MovieDbEntity(
-//            id = id,
-//            page = page,
-//            title = title,
-//            overview = overview,
-//            poster_path = posterPath,
-//            release_date = releaseDate,
-//            backdrop_path = backdropPath
-//        )
-//    }
-
 }

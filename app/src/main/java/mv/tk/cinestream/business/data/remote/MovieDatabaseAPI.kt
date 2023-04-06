@@ -59,7 +59,6 @@ object MovieDatabaseAPI {
     interface TvService {
         @GET("/$API_VERSION/discover/tv")
         suspend fun fetchDiscoveryList(): Response<TvResponse>
-//       TODO: @Query("page") page: Int
     }
 
     interface ActorService {
