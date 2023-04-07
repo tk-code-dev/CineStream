@@ -2,6 +2,7 @@ package mv.tk.cinestream.business.domain.model
 
 import android.os.Parcelable
 import androidx.annotation.Keep
+import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
 @Keep
@@ -43,3 +44,35 @@ data class ActorMovie(
     val video: Boolean,
     val vote_average: Double
 ): Parcelable
+
+@Parcelize
+data class ActorDetail(
+    @SerializedName("birthday")
+    val birthday: String?,
+    @SerializedName("known_for_department")
+    val knownForDepartment: String?,
+    @SerializedName("deathday")
+    val deathday: String?,
+    @SerializedName("id")
+    val id: Int?,
+    @SerializedName("name")
+    val name: String?,
+    @SerializedName("also_known_as")
+    val alsoKnownAs: List<String>?,
+    @SerializedName("gender")
+    val gender: Int?,
+    @SerializedName("biography")
+    val biography: String?,
+    @SerializedName("popularity")
+    val popularity: Double?,
+    @SerializedName("place_of_birth")
+    val placeOfBirth: String?,
+    @SerializedName("profile_path")
+    val profilePath: String?,
+    @SerializedName("adult")
+    val adult: Boolean?,
+    @SerializedName("imdb_id")
+    val imdbId: String?,
+    @SerializedName("homepage")
+    val homepage: String?
+) : Parcelable

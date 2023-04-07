@@ -1,13 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".framework.presentation.details.actor.ActorDetailFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
+    <data>
+
+        <variable
+            name="actor"
+            type="mv.tk.cinestream.business.domain.model.ActorDetail" />
+    </data>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_marginBottom="80dp"
+        android:background="@color/black"
+        tools:context=".framework.presentation.details.movie.MovieDetailFragment">
 
-</FrameLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/img_poster_detail_actor"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:contentDescription="@string/poster"
+                    android:scaleType="fitCenter"
+                    tools:src="@drawable/ic_baseline_movie_24" />
+
+                <TextView
+                    android:id="@+id/item_title_detail_actor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@color/black"
+                    android:gravity="start"
+                    android:padding="3dp"
+                    android:paddingStart="@dimen/dimen_32dp"
+                    android:text="@{actor.name}"
+                    android:textColor="@color/white"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry"
+                    tools:text="title" />
+
+                <TextView
+                    android:id="@+id/item_place_of_birth_detail_actor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:gravity="start"
+                    android:lines="1"
+                    android:padding="3dp"
+                    android:paddingStart="@dimen/dimen_32dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Place  of Birth" />
+
+                <TextView
+                    android:id="@+id/item_birthday_detail_actor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:gravity="start"
+                    android:lines="1"
+                    android:padding="3dp"
+                    android:paddingStart="@dimen/dimen_32dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Birthday" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@color/black"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RatingBar
+                        android:id="@+id/item_popularity_detail_actor"
+                        style="@style/MyRatingBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:background="@color/black"
+                        android:scaleX="0.2"
+                        android:scaleY="0.2"
+                        tools:rating="4.5f" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/item_biography_detail_actor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/black"
+                    android:gravity="start"
+                    android:padding="16dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Overview"/>
+
+                <TextView
+                    android:id="@+id/item_homepage_detail_actor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dimen_16dp"
+                    android:background="@color/black"
+                    android:clickable="true"
+                    android:gravity="start"
+                    android:paddingStart="@dimen/dimen_16dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:text="Homepage" />
+
+                <WebView
+                    android:id="@+id/webView_actor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="WebViewLayout" />
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</layout>

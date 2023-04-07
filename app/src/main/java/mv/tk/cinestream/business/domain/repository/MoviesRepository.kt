@@ -7,6 +7,5 @@ import mv.tk.cinestream.business.domain.model.Output
 
 interface MoviesRepository {
     suspend fun fetchMovies(): Flow<Output<MovieResponse>>
-
     suspend fun fetchMovieDetail(id:Int): Flow<Output<MovieDetailModel>>
 }

@@ -51,7 +51,6 @@ object MovieDatabaseAPI {
 
         @GET("/$API_VERSION/discover/movie?language=en&sort_by=popularity.desc")
         suspend fun fetchDiscoverList(): Response<MovieResponse>
-
         @GET("/$API_VERSION/movie/{id}")
         suspend fun fetchDetails(@Path("id") id: Int): Response<MovieDetailModel>
     }
@@ -65,6 +64,6 @@ object MovieDatabaseAPI {
         @GET("/$API_VERSION/person/popular")
         suspend fun fetchActors(): Response<ActorResponse>
         @GET("/$API_VERSION/person/{id}")
-        suspend fun fetchDetails(@Path("id") id: Int): Response<Person>
+        suspend fun fetchDetails(@Path("id") id: Int): Response<ActorDetail>
     }
 }
