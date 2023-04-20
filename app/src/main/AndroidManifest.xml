@@ -27,8 +27,5 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-        <meta-data
-            android:name="TMDB_API_KEY"
-            android:value="${TMDB_API_KEY}" />
     </application>
 </manifest>
