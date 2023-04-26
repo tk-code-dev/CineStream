@@ -34,21 +34,21 @@ Detail pages, Official site
 
 ***
 # ![image](https://user-images.githubusercontent.com/54562350/234645282-c050da5e-c71c-4484-b589-c4aac61aa811.png) Development Frameworks and Libraries
-  - Hilt:  Dependency injection library for Android that is built on top of Dagger 2. 
+  - Hilt:  Dependency injection library for Android that is built on top of Dagger 2 
   
   - Coroutines: Managing asynchronous tasks
   
-  - Data Binding: Binding UI elements directly to data sources in a declarative manner.
+  - Data Binding: Binding UI elements directly to data sources in a declarative manner
 
-  - LiveData: Observable data holder class that is part of the Android Architecture Components and is used to notify views when the underlying data changes.
+  - LiveData: Observable data holder class that is part of the Android Architecture Components and is used to notify views when the underlying data changes
 
-  - Navigation: Moving between different screens and handling back button presses.
+  - Navigation: Moving between different screens and handling back button presses
 
-  - ViewModel: Storing and managing UI-related data in a lifecycle-conscious way.
+  - ViewModel: Storing and managing UI-related data in a lifecycle-conscious way
  
-  - Material Design: A set of guidelines for designing Android apps. 
+  - Material Design: A set of guidelines for designing Android apps
 
-  - Animations & Transitions: Moving UI widgets and transition between screens in a smooth and visually appealing manner.
+  - Animations & Transitions: Moving UI widgets and transition between screens in a smooth and visually appealing manner
 
 ***
 
