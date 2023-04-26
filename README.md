@@ -1,4 +1,4 @@
-# CineStream
+# ![image](https://user-images.githubusercontent.com/54562350/234675789-1e8a08f2-cf9a-4f69-943d-2704ad8d0156.png) CineStream
 
 ### This is a demo application built with the goal to create a fun and challenging application using TMDB api.
 
