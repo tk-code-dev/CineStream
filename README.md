@@ -13,27 +13,23 @@
 Users can obtain a list of the latest movies, TV shows, and popular actors through the bottom navigation. The detail screen includes release date, length, rating, overview, and site link.
 
 ***
-# Screenshots
+# Screenshot
 <p float="left">  
- sorting by name, population, area
-  
-<img src="https://user-images.githubusercontent.com/54562350/234634077-98db4274-f081-4b95-94f9-77d6ad2b1b37.png"  width="200" height="400"/>
-
-<img src="https://user-images.githubusercontent.com/54562350/234633884-9c785e83-0c81-48ba-92a0-1ee4342f5f4d.png"  width="200" height="400"/>
-
-<img src="https://user-images.githubusercontent.com/54562350/234634057-77cfcfaa-b874-47ea-9c13-2a9d4eabd646.png"  width="200" height="400"/>
-   
+BottomTab Movie, TV, Actor 
+   <p align="center">
+<img src="https://user-images.githubusercontent.com/54562350/234672057-37c51bc7-21e3-463d-842a-8279c091670a.png"  width="200" height="400"/>
+<img src="https://user-images.githubusercontent.com/54562350/234672050-a5913d49-6d5e-49e9-a605-016b8e34934a.png"  width="200" height="400"/>
+<img src="https://user-images.githubusercontent.com/54562350/234672032-44609a9f-cd6f-4d7f-ba81-1392843ef587.png"  width="200" height="400"/>
+   </p>
 </p>
 
 <p float="left">
-detail page, bookmarked countries
-  
-<img src="https://user-images.githubusercontent.com/54562350/234633485-f9da2088-0659-4394-b724-f3a340008424.png"  width="200" height="400"/>
-  
-<img src="https://user-images.githubusercontent.com/54562350/234639540-470e9910-9a7a-4276-8359-733241bac84d.png"  width="200" height="400"/>
-  
-<img src="https://user-images.githubusercontent.com/54562350/234628939-84dc9ab0-8e99-4802-8b1b-485fa116bdaa.png" width="200" height="400"/>
-  
+Detail pages, Official site
+   <p align="center">
+<img src="https://user-images.githubusercontent.com/54562350/234672055-36ac8390-bffe-4595-a6ff-aab57b3517a2.png"  width="200" height="400"/>
+<img src="https://user-images.githubusercontent.com/54562350/234672042-880af0d6-6ac2-4d30-952a-4acb790f8ca1.png"  width="200" height="400"/>
+<img src="https://user-images.githubusercontent.com/54562350/234672049-39784e72-56dc-460b-a6e1-d4160f9094b3.png"  width="200" height="400"/>
+   </p>
 </p>
 
 ***
