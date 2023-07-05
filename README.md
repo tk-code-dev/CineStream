@@ -7,7 +7,7 @@
 - Single Activity Pattern: The UI of the app consists of a single Activity and multiple Fragments.
 
 - The App gets Movie info via a RESTful API https://www.themoviedb.org/documentation/api?language=en-CA
-
+https://github.com/tk-code-dev
 # ![image](https://user-images.githubusercontent.com/54562350/234645048-3deb40a4-098a-4953-923b-0d84540f0ab7.png)  How to use 
 
 Users can obtain a list of the latest movies, TV shows, and popular actors through the bottom navigation. The detail screen includes release date, length, rating, overview, and site link.
